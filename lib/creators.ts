@@ -44,6 +44,15 @@ export function extractCardData(item: BagsTokenLeaderBoardItem): CreatorCardData
   };
 }
 
+const MOCK_CREATORS: CreatorCardData[] = [
+  { handle: "elonmusk", displayName: "Elon Musk", avatarUrl: null, priceUsd: 12.34, holderCount: 4821, tokenMint: "mock-1" },
+  { handle: "MrBeast", displayName: "MrBeast", avatarUrl: null, priceUsd: 8.91, holderCount: 3102, tokenMint: "mock-2" },
+  { handle: "ninja", displayName: "Ninja", avatarUrl: null, priceUsd: 5.67, holderCount: 1987, tokenMint: "mock-3" },
+  { handle: "pokabornt", displayName: "Poka", avatarUrl: null, priceUsd: 3.45, holderCount: 892, tokenMint: "mock-4" },
+  { handle: "timthetatman", displayName: "TimTheTatman", avatarUrl: null, priceUsd: 2.10, holderCount: 654, tokenMint: "mock-5" },
+  { handle: "kaicenat", displayName: "Kai Cenat", avatarUrl: null, priceUsd: 7.23, holderCount: 2341, tokenMint: "mock-6" },
+];
+
 const CACHE_KEY = "landing:creators";
 const CACHE_TTL_MS = 30_000;
 
@@ -57,6 +66,7 @@ export async function getCreatorsForGrid(): Promise<CreatorCardData[]> {
 
   try {
     const sdk = getBagsSDK();
+    if (!sdk) return MOCK_CREATORS;
     const items = await sdk.state.getTopTokensByLifetimeFees();
     const allCards = items.map(extractCardData);
 

@@ -13,8 +13,25 @@ const envSchema = z.object({
 
 export type Env = z.infer<typeof envSchema>;
 
+const devDefaults: Record<string, string> = {
+  BAGS_API_KEY: "dev-placeholder",
+  NEXT_PUBLIC_PRIVY_APP_ID: "dev-placeholder",
+  PRIVY_APP_SECRET: "dev-placeholder",
+  NEXT_PUBLIC_SUPABASE_URL: "http://localhost:54321",
+  NEXT_PUBLIC_SUPABASE_ANON_KEY: "dev-placeholder",
+  SUPABASE_SERVICE_ROLE_KEY: "dev-placeholder",
+  HELIUS_API_KEY: "dev-placeholder",
+  NEXT_PUBLIC_HELIUS_RPC_URL: "http://localhost:8899",
+};
+
 export function validateEnv(): Env {
-  const result = envSchema.safeParse(process.env);
+  const isDev = process.env.NODE_ENV === "development";
+
+  const envWithDefaults = isDev
+    ? { ...devDefaults, ...process.env }
+    : process.env;
+
+  const result = envSchema.safeParse(envWithDefaults);
   if (!result.success) {
     const formatted = result.error.issues
       .map((issue) => `  - ${issue.path.join(".")}: ${issue.message}`)

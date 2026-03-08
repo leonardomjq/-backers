@@ -20,6 +20,9 @@ export async function GET(
 
   try {
     const sdk = getBagsSDK();
+    if (!sdk) {
+      return NextResponse.json({ error: "BAGS_API_KEY not configured" }, { status: 503 });
+    }
     const data = await sdk.state.getLaunchWalletV2(sanitized, "twitter");
     const serialized = {
       provider: data.provider,
