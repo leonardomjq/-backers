@@ -167,6 +167,9 @@ export function deriveTokenStatus(
 // -- Mock data for dev mode --
 
 function getMockCreatorPageData(handle: string): CreatorPageData {
+  const knownHandles = MOCK_CREATORS.map((c) => c.handle.toLowerCase());
+  const hasToken = knownHandles.includes(handle.toLowerCase());
+
   return {
     profile: {
       username: handle,
@@ -174,18 +177,20 @@ function getMockCreatorPageData(handle: string): CreatorPageData {
       avatarUrl: null,
       wallet: null,
     },
-    token: {
-      mint: "mock-token-mint",
-      name: `${handle}Token`,
-      symbol: handle.slice(0, 3).toUpperCase(),
-      icon: null,
-      price: 1.23,
-      marketCap: 500_000,
-      volume: 25_000,
-      holders: 150,
-      lifetimeFees: "2500000000",
-      status: "bonding-curve",
-    },
+    token: hasToken
+      ? {
+          mint: "mock-token-mint",
+          name: `${handle}Token`,
+          symbol: handle.slice(0, 3).toUpperCase(),
+          icon: null,
+          price: 1.23,
+          marketCap: 500_000,
+          volume: 25_000,
+          holders: 150,
+          lifetimeFees: "2500000000",
+          status: "bonding-curve",
+        }
+      : null,
   };
 }
 
