@@ -29,48 +29,65 @@ const mockCacheSet = cache.set as ReturnType<typeof vi.fn>;
 
 // Helper to build a mock BagsTokenLeaderBoardItem
 function makeMockItem(overrides: Record<string, unknown> = {}) {
+  const hasTokenInfo = "tokenInfo" in overrides;
+  const hasTokenLatestPrice = "tokenLatestPrice" in overrides;
+  const hasCreators = "creators" in overrides;
+
+  const defaultTokenInfo = {
+    id: "id1",
+    name: "TestCreator",
+    symbol: "TC",
+    holderCount: 42,
+    usdPrice: 0.05,
+    icon: "https://example.com/icon.png",
+  };
+
+  const defaultTokenLatestPrice = {
+    price: 0.001,
+    priceUSD: 0.05,
+    priceSOL: 0.0003,
+    tokenAddress: "tokenMint123",
+    blockTime: "2026-01-01T00:00:00Z",
+  };
+
+  const defaultCreators = [
+    {
+      username: "testuser",
+      pfp: "https://example.com/pfp.png",
+      twitterUsername: "testhandle",
+      royaltyBps: 500,
+      isCreator: true,
+      wallet: "walletabc",
+      provider: "twitter" as const,
+      providerUsername: "testhandle",
+    },
+  ];
+
+  // Build rest overrides (excluding special keys)
+  const restOverrides = Object.fromEntries(
+    Object.entries(overrides).filter(
+      ([k]) => !["tokenInfo", "tokenLatestPrice", "creators"].includes(k),
+    ),
+  );
+
   return {
     token: "tokenMint123",
     lifetimeFees: "1000",
-    tokenInfo: {
-      id: "id1",
-      name: "TestCreator",
-      symbol: "TC",
-      holderCount: 42,
-      usdPrice: 0.05,
-      icon: "https://example.com/icon.png",
-      ...(overrides.tokenInfo as Record<string, unknown> | undefined),
-    },
-    creators: [
-      {
-        username: "testuser",
-        pfp: "https://example.com/pfp.png",
-        twitterUsername: "testhandle",
-        royaltyBps: 500,
-        isCreator: true,
-        wallet: "walletabc",
-        provider: "twitter" as const,
-        providerUsername: "testhandle",
-      },
-      ...(Array.isArray(overrides.extraCreators)
-        ? overrides.extraCreators
-        : []),
-    ],
+    tokenInfo: hasTokenInfo
+      ? overrides.tokenInfo === null
+        ? null
+        : { ...defaultTokenInfo, ...(overrides.tokenInfo as Record<string, unknown>) }
+      : defaultTokenInfo,
+    creators: hasCreators
+      ? overrides.creators
+      : defaultCreators,
     tokenSupply: null,
-    tokenLatestPrice: {
-      price: 0.001,
-      priceUSD: 0.05,
-      priceSOL: 0.0003,
-      tokenAddress: "tokenMint123",
-      blockTime: "2026-01-01T00:00:00Z",
-      ...(overrides.tokenLatestPrice as Record<string, unknown> | undefined),
-    },
-    ...Object.fromEntries(
-      Object.entries(overrides).filter(
-        ([k]) =>
-          !["tokenInfo", "tokenLatestPrice", "extraCreators"].includes(k),
-      ),
-    ),
+    tokenLatestPrice: hasTokenLatestPrice
+      ? overrides.tokenLatestPrice === null
+        ? null
+        : { ...defaultTokenLatestPrice, ...(overrides.tokenLatestPrice as Record<string, unknown>) }
+      : defaultTokenLatestPrice,
+    ...restOverrides,
   };
 }
 
