@@ -62,6 +62,11 @@ Plans:
 ## Phase 3: Creator Page
 **Goal:** Dynamic creator profile with live Bags data and trade entry points
 **Requirements:** CREA-01, CREA-02, CREA-03, CREA-04, CREA-05, CREA-06
+**Plans:** 2 plans
+
+Plans:
+- [ ] 03-01-PLAN.md — Data layer: CreatorPageData type, formatters, getCreatorPageData(), enriched API route
+- [ ] 03-02-PLAN.md — UI components (profile, stats, fees, badge, buttons, launch prompt) + page composition + visual verification
 
 ### Scope
 - Creator page fetches data from `/api/creator/[handle]`
@@ -181,4 +186,4 @@ Plans:
 
 ---
 *Roadmap created: 2026-03-07*
-*Last updated: 2026-03-08 after Phase 2 Plan 02 execution*
+*Last updated: 2026-03-08 after Phase 3 planning*
