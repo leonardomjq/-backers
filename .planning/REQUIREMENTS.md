@@ -21,11 +21,11 @@
 
 ### Landing Page
 
-- [ ] **LAND-01**: Creator grid displays 5-10 pre-seeded creators with live data
-- [ ] **LAND-02**: Each creator card shows avatar, name, token price, backer count
-- [ ] **LAND-03**: Search bar allows typing any Twitter handle to find/create creator page
-- [ ] **LAND-04**: Clear value proposition visible in first viewport without scrolling
-- [ ] **LAND-05**: Page loads in under 2 seconds with pre-cached data
+- [x] **LAND-01**: Creator grid displays 5-10 pre-seeded creators with live data
+- [x] **LAND-02**: Each creator card shows avatar, name, token price, backer count
+- [x] **LAND-03**: Search bar allows typing any Twitter handle to find/create creator page
+- [x] **LAND-04**: Clear value proposition visible in first viewport without scrolling
+- [x] **LAND-05**: Page loads in under 2 seconds with pre-cached data
 
 ### Creator Page
 
@@ -117,11 +117,11 @@
 | AUTH-02 | Phase 1 | Complete |
 | AUTH-03 | Phase 1 | Complete |
 | AUTH-04 | Phase 1 | Complete |
-| LAND-01 | Phase 2 | Pending |
-| LAND-02 | Phase 2 | Pending |
-| LAND-03 | Phase 2 | Pending |
-| LAND-04 | Phase 2 | Pending |
-| LAND-05 | Phase 2 | Pending |
+| LAND-01 | Phase 2 | Complete |
+| LAND-02 | Phase 2 | Complete |
+| LAND-03 | Phase 2 | Complete |
+| LAND-04 | Phase 2 | Complete |
+| LAND-05 | Phase 2 | Complete |
 | CREA-01 | Phase 3 | Pending |
 | CREA-02 | Phase 3 | Pending |
 | CREA-03 | Phase 3 | Pending |

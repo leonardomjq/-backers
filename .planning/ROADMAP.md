@@ -36,10 +36,10 @@ Plans:
 ## Phase 2: Landing Page
 **Goal:** Creator grid with live data, search, compelling first impression
 **Requirements:** LAND-01, LAND-02, LAND-03, LAND-04, LAND-05
-**Plans:** 2 plans
+**Plans:** 1/2 plans complete
 
 Plans:
-- [ ] 02-01-PLAN.md — Data layer (lib/creators.ts) + UI components (Hero, CreatorCard, GridSkeleton, SearchBar)
+- [x] 02-01-PLAN.md — Data layer (lib/creators.ts) + UI components (Hero, CreatorCard, GridSkeleton, SearchBar)
 - [ ] 02-02-PLAN.md — Page assembly (CreatorGrid + page.tsx wiring) + visual verification
 
 ### Scope
@@ -181,4 +181,4 @@ Plans:
 
 ---
 *Roadmap created: 2026-03-07*
-*Last updated: 2026-03-08 after Phase 2 planning*
+*Last updated: 2026-03-08 after Phase 2 Plan 01 execution*

@@ -2,29 +2,29 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-current_plan: Not started
-status: planning
-stopped_at: Completed 01-03-PLAN.md (Phase 1 complete)
-last_updated: "2026-03-08T11:42:25.551Z"
+current_plan: 02-02
+status: executing
+stopped_at: Completed 02-01-PLAN.md
+last_updated: "2026-03-08T16:05:01Z"
 progress:
   total_phases: 7
   completed_phases: 1
-  total_plans: 3
-  completed_plans: 3
-  percent: 100
+  total_plans: 5
+  completed_plans: 4
+  percent: 80
 ---
 
 # Project State: Backers
 
 ## Current
 - **Milestone:** v1 — Hackathon Submission
-- **Phase:** 1 (Foundation — API Routes & Auth)
-- **Current Plan:** Not started
-- **Status:** Ready to plan
-- **Progress:** [██████████] 100% (3/3 plans)
-- **Next action:** Plan Phase 2 (Landing Page)
-- **Last session:** 2026-03-08T11:37:10.197Z
-- **Stopped at:** Completed 01-03-PLAN.md (Phase 1 complete)
+- **Phase:** 2 (Landing Page)
+- **Current Plan:** 02-02
+- **Status:** Executing
+- **Progress:** [████████--] 80% (4/5 plans)
+- **Next action:** Execute Plan 02-02 (Page Composition)
+- **Last session:** 2026-03-08T16:05:01Z
+- **Stopped at:** Completed 02-01-PLAN.md
 
 ## Completed
 - [x] Codebase mapping (.planning/codebase/)
@@ -35,6 +35,7 @@ progress:
 - [x] Phase 1 Plan 01: Foundation Utilities — vitest, env validation, cache utility (9 tests passing)
 - [x] Phase 1 Plan 02: API Routes & Auth — 5 API routes, Privy server auth, middleware (25 tests passing)
 - [x] Phase 1 Plan 03: Error Boundaries & Auth Verification — 8 UI files, checkpoint approved (live auth deferred)
+- [x] Phase 2 Plan 01: Data Layer & Components — lib/creators.ts + 4 UI components (14 tests passing)
 
 ## Key Context
 - Hackathon project — async judging, 60-second URL visit
@@ -58,6 +59,8 @@ progress:
 | Middleware cookie-check only | 2026-03-08 | Edge runtime limitation + CVE-2025-29927; full verification in API routes |
 | Wallet base58 serialization | 2026-03-08 | PublicKey objects not JSON-serializable; convert to base58 string at API boundary |
 | Deferred live auth verification | 2026-03-08 | Privy credentials not yet configured; automated checks pass, live testing deferred |
+| Unoptimized next/image for avatars | 2026-03-08 | Creator avatars come from unknown hosts; unoptimized prop avoids hostname config issues for 80px images |
+| Curated filtering with fallback | 2026-03-08 | Filter by CURATED_CREATORS list but fall back to all results if no matches (never empty grid) |
 
 ## Blockers
 None currently.
