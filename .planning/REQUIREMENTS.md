@@ -8,9 +8,9 @@
 ### Infrastructure
 
 - [ ] **INFRA-01**: API routes proxy all Bags API calls server-side with API key
-- [ ] **INFRA-02**: Token state data cached (30s TTL) to reduce API calls
+- [x] **INFRA-02**: Token state data cached (30s TTL) to reduce API calls
 - [ ] **INFRA-03**: Error boundaries and loading states on all routes
-- [ ] **INFRA-04**: Environment variable validation at startup
+- [x] **INFRA-04**: Environment variable validation at startup
 
 ### Authentication
 
@@ -110,9 +110,9 @@
 | Requirement | Phase | Status |
 |-------------|-------|--------|
 | INFRA-01 | Phase 1 | Pending |
-| INFRA-02 | Phase 1 | Pending |
+| INFRA-02 | Phase 1 | Complete |
 | INFRA-03 | Phase 1 | Pending |
-| INFRA-04 | Phase 1 | Pending |
+| INFRA-04 | Phase 1 | Complete |
 | AUTH-01 | Phase 1 | Pending |
 | AUTH-02 | Phase 1 | Pending |
 | AUTH-03 | Phase 1 | Pending |
