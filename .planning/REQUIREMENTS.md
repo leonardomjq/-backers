@@ -29,12 +29,12 @@
 
 ### Creator Page
 
-- [ ] **CREA-01**: Creator page displays token stats from Bags State API (price, market cap, holders)
-- [ ] **CREA-02**: Creator page shows fee earnings data (lifetime fees)
-- [ ] **CREA-03**: Launch status badge shows token graduation state
+- [x] **CREA-01**: Creator page displays token stats from Bags State API (price, market cap, holders)
+- [x] **CREA-02**: Creator page shows fee earnings data (lifetime fees)
+- [x] **CREA-03**: Launch status badge shows token graduation state
 - [ ] **CREA-04**: "Buy Shares" button initiates purchase flow
 - [ ] **CREA-05**: "Sell Shares" button visible when user holds tokens
-- [ ] **CREA-06**: Creator page works for any Twitter handle (permissionless)
+- [x] **CREA-06**: Creator page works for any Twitter handle (permissionless)
 
 ### Trading
 
@@ -122,12 +122,12 @@
 | LAND-03 | Phase 2 | Complete |
 | LAND-04 | Phase 2 | Complete |
 | LAND-05 | Phase 2 | Complete |
-| CREA-01 | Phase 3 | Pending |
-| CREA-02 | Phase 3 | Pending |
-| CREA-03 | Phase 3 | Pending |
+| CREA-01 | Phase 3 | Complete |
+| CREA-02 | Phase 3 | Complete |
+| CREA-03 | Phase 3 | Complete |
 | CREA-04 | Phase 3 | Pending |
 | CREA-05 | Phase 3 | Pending |
-| CREA-06 | Phase 3 | Pending |
+| CREA-06 | Phase 3 | Complete |
 | TRAD-01 | Phase 4 | Pending |
 | TRAD-02 | Phase 4 | Pending |
 | TRAD-03 | Phase 4 | Pending |
