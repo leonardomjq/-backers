@@ -6,12 +6,12 @@
 ## Phase 1: Foundation — API Routes & Auth
 **Goal:** Server-side Bags API proxy, Privy auth flow, error handling infrastructure
 **Requirements:** INFRA-01, INFRA-02, INFRA-03, INFRA-04, AUTH-01, AUTH-02, AUTH-03, AUTH-04
-**Plans:** 3 plans
+**Plans:** 3/3 plans complete
 
 Plans:
-- [ ] 01-01-PLAN.md — Test infra, env validation (Zod), in-memory TTL cache
-- [ ] 01-02-PLAN.md — API routes (creators, creator detail, stubs), middleware, Privy server auth
-- [ ] 01-03-PLAN.md — Error boundaries, loading states, not-found page, auth verification
+- [x] 01-01-PLAN.md — Test infra, env validation (Zod), in-memory TTL cache
+- [x] 01-02-PLAN.md — API routes (creators, creator detail, stubs), middleware, Privy server auth
+- [x] 01-03-PLAN.md — Error boundaries, loading states, not-found page, auth verification
 
 ### Scope
 - Create API routes for Bags API proxy (creators list, creator detail, trade, launch)

@@ -9,14 +9,14 @@
 
 - [x] **INFRA-01**: API routes proxy all Bags API calls server-side with API key
 - [x] **INFRA-02**: Token state data cached (30s TTL) to reduce API calls
-- [ ] **INFRA-03**: Error boundaries and loading states on all routes
+- [x] **INFRA-03**: Error boundaries and loading states on all routes
 - [x] **INFRA-04**: Environment variable validation at startup
 
 ### Authentication
 
-- [ ] **AUTH-01**: User can sign in with Google via Privy
-- [ ] **AUTH-02**: Privy creates embedded Solana wallet on first login
-- [ ] **AUTH-03**: User session persists across browser refresh
+- [x] **AUTH-01**: User can sign in with Google via Privy
+- [x] **AUTH-02**: Privy creates embedded Solana wallet on first login
+- [x] **AUTH-03**: User session persists across browser refresh
 - [x] **AUTH-04**: Auth-gated routes (dashboard, trade actions) redirect to login
 
 ### Landing Page
@@ -111,11 +111,11 @@
 |-------------|-------|--------|
 | INFRA-01 | Phase 1 | Complete |
 | INFRA-02 | Phase 1 | Complete |
-| INFRA-03 | Phase 1 | Pending |
+| INFRA-03 | Phase 1 | Complete |
 | INFRA-04 | Phase 1 | Complete |
-| AUTH-01 | Phase 1 | Pending |
-| AUTH-02 | Phase 1 | Pending |
-| AUTH-03 | Phase 1 | Pending |
+| AUTH-01 | Phase 1 | Complete |
+| AUTH-02 | Phase 1 | Complete |
+| AUTH-03 | Phase 1 | Complete |
 | AUTH-04 | Phase 1 | Complete |
 | LAND-01 | Phase 2 | Pending |
 | LAND-02 | Phase 2 | Pending |
