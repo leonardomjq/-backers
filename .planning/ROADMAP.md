@@ -6,6 +6,12 @@
 ## Phase 1: Foundation — API Routes & Auth
 **Goal:** Server-side Bags API proxy, Privy auth flow, error handling infrastructure
 **Requirements:** INFRA-01, INFRA-02, INFRA-03, INFRA-04, AUTH-01, AUTH-02, AUTH-03, AUTH-04
+**Plans:** 3 plans
+
+Plans:
+- [ ] 01-01-PLAN.md — Test infra, env validation (Zod), in-memory TTL cache
+- [ ] 01-02-PLAN.md — API routes (creators, creator detail, stubs), middleware, Privy server auth
+- [ ] 01-03-PLAN.md — Error boundaries, loading states, not-found page, auth verification
 
 ### Scope
 - Create API routes for Bags API proxy (creators list, creator detail, trade, launch)
@@ -126,7 +132,7 @@
 
 ### Scope
 - Holdings list from Bags Analytics API
-- Current value calculation (holdings × current price)
+- Current value calculation (holdings x current price)
 - P&L display (current value vs purchase cost)
 - Total portfolio value
 - Wallet balance display
@@ -157,7 +163,7 @@
 ### UAT
 - [ ] Landing page populated with 5+ real creators
 - [ ] At least 3 trades verifiable onchain
-- [ ] Complete flow works: land → click creator → sign in → buy shares
+- [ ] Complete flow works: land -> click creator -> sign in -> buy shares
 - [ ] No error states visible during normal flow
 - [ ] App loads and is interactive within 2 seconds
 - [ ] Works on mobile browser
@@ -170,4 +176,4 @@
 
 ---
 *Roadmap created: 2026-03-07*
-*Last updated: 2026-03-07 after initial definition*
+*Last updated: 2026-03-07 after Phase 1 planning*
