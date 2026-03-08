@@ -1,21 +1,17 @@
-import Link from "next/link";
+import { Suspense } from "react";
+import { Hero } from "@/components/hero";
+import { SearchBar } from "@/components/search-bar";
+import { CreatorGrid } from "@/components/creator-grid";
+import { GridSkeleton } from "@/components/grid-skeleton";
 
 export default function HomePage() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center gap-6 px-4 text-center">
-      <h1 className="text-5xl font-bold tracking-tight">
-        Back your favorite creators
-      </h1>
-      <p className="max-w-md text-lg text-muted-foreground">
-        Buy Bags tokens to support the creators you believe in — powered by
-        Solana.
-      </p>
-      <Link
-        href="/dashboard"
-        className="rounded-lg bg-primary px-6 py-3 font-medium text-primary-foreground transition-colors hover:bg-primary/90"
-      >
-        Get Started
-      </Link>
+    <main className="flex min-h-screen flex-col items-center gap-12 px-4 py-16">
+      <Hero />
+      <SearchBar />
+      <Suspense fallback={<GridSkeleton />}>
+        <CreatorGrid />
+      </Suspense>
     </main>
   );
 }
