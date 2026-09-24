@@ -71,7 +71,7 @@ Social Finance · Bags API
 
 ## Status
 
-In development.
+Hackathon build, no longer in development.
 
 ---
 
